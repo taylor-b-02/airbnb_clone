@@ -6,6 +6,21 @@ module.exports = (sequelize, DataTypes) => {
 	const User = sequelize.define(
 		'User',
 		{
+			firstName: {
+				type: DataTypes.STRING(20),
+				allowNull: false,
+				unique: false,
+			},
+			lastName: {
+				type: DataTypes.STRING(30),
+				allowNull: false,
+				unique: false,
+			},
+			isHost: {
+				type: DataTypes.BOOLEAN,
+				allowNull: false,
+				defaultValue: 'false',
+			},
 			username: {
 				type: DataTypes.STRING,
 				allowNull: false,

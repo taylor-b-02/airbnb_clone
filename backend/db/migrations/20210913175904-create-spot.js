@@ -1,55 +1,60 @@
 'use strict';
 module.exports = {
 	up: (queryInterface, Sequelize) => {
-		return queryInterface.createTable('Users', {
+		return queryInterface.createTable('Spots', {
 			id: {
 				allowNull: false,
 				autoIncrement: true,
 				primaryKey: true,
 				type: Sequelize.INTEGER,
 			},
-			firstName: {
-				type: Sequelize.STRING(20),
+			hostId: {
 				allowNull: false,
-				unique: false,
+				type: Sequelize.INTEGER,
 			},
-			lastName: {
-				type: Sequelize.STRING(30),
+			address: {
 				allowNull: false,
-				unique: false,
+				type: Sequelize.STRING,
 			},
-			username: {
-				type: Sequelize.STRING(30),
+			city: {
 				allowNull: false,
-				unique: true,
+				type: Sequelize.STRING,
 			},
-			email: {
-				type: Sequelize.STRING(256),
+			state: {
 				allowNull: false,
-				unique: true,
+				type: Sequelize.STRING,
 			},
-			hashedPassword: {
-				type: Sequelize.STRING.BINARY,
+			country: {
 				allowNull: false,
+				type: Sequelize.STRING,
 			},
-			isHost: {
-				type: Sequelize.BOOLEAN,
+			lat: {
 				allowNull: false,
-				defaultValue: 0,
+				type: Sequelize.FLOAT,
+			},
+			lng: {
+				allowNull: false,
+				type: Sequelize.FLOAT,
+			},
+			name: {
+				allowNull: false,
+				type: Sequelize.STRING,
+			},
+			price: {
+				allowNull: false,
+				type: Sequelize.FLOAT,
 			},
 			createdAt: {
 				allowNull: false,
 				type: Sequelize.DATE,
-				defaultValue: Sequelize.fn('now'),
 			},
 			updatedAt: {
 				allowNull: false,
 				type: Sequelize.DATE,
-				defaultValue: Sequelize.fn('now'),
 			},
 		});
 	},
 	down: (queryInterface, Sequelize) => {
-		return queryInterface.dropTable('Users');
+		return queryInterface.dropTable('Spots');
 	},
 };
