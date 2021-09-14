@@ -8,10 +8,36 @@ const { handleValidationErrors } = require('../../utils/validation');
 
 const router = express.Router();
 
+// const { hostId, address, city, state, country, lat, lng, name, price } =
+
 const validateSpot = [
-	check('property1')
+	check('hostId')
 		.exists({ checkFalsy: true })
-		.withMessage('Something something something'),
+		.withMessage('Host ID must be included'),
+	check('address')
+		.exists({ checkFalsy: true })
+		.withMessage('Street address must be included'),
+	check('city')
+		.exists({ checkFalsy: true })
+		.withMessage('City must be included'),
+	check('state')
+		.exists({ checkFalsy: true })
+		.withMessage('State must be included'),
+	check('country')
+		.exists({ checkFalsy: true })
+		.withMessage('Country must be included'),
+	check('lat')
+		.exists({ checkFalsy: true })
+		.withMessage('Lattitude must be included'),
+	check('lng')
+		.exists({ checkFalsy: true })
+		.withMessage('Longitude must be included'),
+	check('name')
+		.exists({ checkFalsy: true })
+		.withMessage('Name must be included'),
+	check('price')
+		.exists({ checkFalsy: true })
+		.withMessage('Price Per Night must be included'),
 	handleValidationErrors,
 ];
 
@@ -40,6 +66,8 @@ router.get(
 // Create a spot
 router.post(
 	'/',
+	requireAuth,
+	validateSpot,
 	asyncHandler(async (req, res, next) => {
 		const { hostId, address, city, state, country, lat, lng, name, price } =
 			req.body;
@@ -55,6 +83,7 @@ router.post(
 router.put(
 	'/:id(\\d+)',
 	requireAuth,
+	validateSpot,
 	asyncHandler(async (req, res, next) => {
 		const { id } = req.params;
 		const { hostId, address, city, state, country, lat, lng, name, price } =
