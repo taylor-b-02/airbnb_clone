@@ -14,7 +14,7 @@ module.exports = {
       }], {});
     */
 		return queryInterface.bulkInsert(
-			'Users',
+			'Spots',
 			[
 				{
 					hostId: 9,
@@ -44,12 +44,11 @@ module.exports = {
 	},
 
 	down: (queryInterface, Sequelize) => {
-		/*
-      Add reverting commands here.
-      Return a promise to correctly handle asynchronicity.
-
-      Example:
-      return queryInterface.bulkDelete('People', null, {});
-    */
+		const Op = Sequelize.Op;
+		return queryInterface.bulkDelete('Spots', null, {
+			truncate: true,
+			cascade: true,
+			restartIdentity: true,
+		});
 	},
 };

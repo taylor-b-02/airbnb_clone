@@ -43,15 +43,9 @@ module.exports = (sequelize, DataTypes) => {
 		{}
 	);
 	Spot.associate = function (models) {
-		// associations can be defined here
 		Spot.hasMany(models.Image, { foreignKey: 'spotId' });
 		Spot.hasMany(models.Booking, { foreignKey: 'spotId' });
-		Spot.belongsTo(models.User, { foreignKey: 'hostId', as: 'id' });
-		// Spot.hasMany(models.User, { as: 'hostId' });
-		// Spot.belongsTo(models.User, {
-		// 	foreignKey: 'hostId',
-		// 	targetKey: 'Users.id',
-		// });
+		Spot.belongsTo(models.User, { foreignKey: 'hostId' });
 		Spot.hasMany(models.Review, { foreignKey: 'spotId' });
 	};
 	return Spot;

@@ -19,7 +19,9 @@ const validateSpot = [
 router.get(
 	'/',
 	asyncHandler(async (req, res, next) => {
-		return await Spot.findAll();
+		const spots = await Spot.findAll();
+
+		return res.json(spots);
 	})
 );
 
@@ -28,8 +30,10 @@ router.get(
 	'/:id(\\d+)',
 	asyncHandler(async (req, res, next) => {
 		const { id } = req.params;
+		console.log('SPOT ID URL PARAM:', id);
+		const spot = await Spot.findByPk(id);
 
-		return await Spot.findByPk(id);
+		return res.json(spot);
 	})
 );
 module.exports = router;
