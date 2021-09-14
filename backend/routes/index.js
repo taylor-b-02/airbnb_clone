@@ -4,7 +4,7 @@ const router = express.Router();
 //~~~~~Import other routers~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const apiRouter = require('./api');
 
-//~~~~~Use the others routers~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~Use the others routers from the api routes folder~~~~~~~~~~~~~~~~~
 router.use('/api', apiRouter);
 
 //~~~~~Static routes~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
