@@ -36,4 +36,60 @@ router.get(
 		return res.json(spot);
 	})
 );
+
+// Create a spot
+router.post(
+	'/',
+	asyncHandler(async (req, res, next) => {
+		const { hostId, address, city, state, country, lat, lng, name, price } =
+			req.body;
+
+		const newSpot = await Spot.create({});
+
+		return res.json(newSpot);
+	})
+);
+
+//TODO: Double check auth to make sure only the host can update a spot
+// Update a spot
+router.put(
+	'/:id(\\d+)',
+	requireAuth,
+	asyncHandler(async (req, res, next) => {
+		const { id } = req.params;
+		const { hostId, address, city, state, country, lat, lng, name, price } =
+			req.body;
+
+		const spot = await Spot.findByPk(id);
+		await spot.update({
+			hostId,
+			address,
+			city,
+			state,
+			country,
+			lat,
+			lng,
+			name,
+			price,
+		});
+
+		return res.json(spot);
+	})
+);
+
+// Delete a spot
+router.delete(
+	'/:id(\\d+)',
+	requireAuth,
+	asyncHandler(async (req, res, next) => {
+		const { id } = req.params;
+
+		const spot = await Spot.findByPk(id);
+
+		spot.destroy();
+
+		return res.json('Successfully deleted');
+	})
+);
+
 module.exports = router;
