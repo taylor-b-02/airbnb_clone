@@ -8,8 +8,6 @@ const { handleValidationErrors } = require('../../utils/validation');
 
 const router = express.Router();
 
-// const { hostId, address, city, state, country, lat, lng, name, price } =
-
 const validateSpot = [
 	check('hostId')
 		.exists({ checkFalsy: true })
