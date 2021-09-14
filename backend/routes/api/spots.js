@@ -15,10 +15,21 @@ const validateSpot = [
 	handleValidationErrors,
 ];
 
-router.get('/', async (req, res, next) => {
-	return await Spot.findAll({
-		limit: 50,
-	});
-});
+// Get all spots
+router.get(
+	'/',
+	asyncHandler(async (req, res, next) => {
+		return await Spot.findAll();
+	})
+);
 
+//Get spot by id
+router.get(
+	'/:id(\\d+)',
+	asyncHandler(async (req, res, next) => {
+		const { id } = req.params;
+
+		return await Spot.findByPk(id);
+	})
+);
 module.exports = router;
