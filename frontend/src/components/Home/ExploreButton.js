@@ -7,7 +7,7 @@ import './ExploreButton.css';
 const ExploreButton = ({ name, travelTime, imageURL }) => {
 	return (
 		<Link to="/" id="explore-button-container">
-			<img id="explore-img" src={imageURL} />
+			<img id="explore-img" src={imageURL} alt={name} />
 			<div id="explore-text-container">
 				<b id="explore-name">{name}</b>
 				<span id="explore-drive-time">{`${travelTime} drive`}</span>

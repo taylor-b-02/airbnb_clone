@@ -11,6 +11,8 @@ const Home = () => {
 			<img
 				src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
 				id="main-pic"
+				//TODO: Update alt one final pic is finalized
+				alt="Splash Page"
 			/>
 			<span id="explore-nearby-span">Explore Nearby</span>
 			<div id="explore-container">
