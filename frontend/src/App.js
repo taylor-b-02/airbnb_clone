@@ -6,6 +6,7 @@ import SignupFormPage from './components/SignupFormPage';
 import * as sessionActions from './store/session';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
+import SpotsPage from './components/SpotsPage';
 
 function App() {
 	const dispatch = useDispatch();
@@ -27,7 +28,8 @@ function App() {
 					</Route>
 				</Switch>
 			)}
-			<Home />
+			{/* <Home /> */}
+			<SpotsPage />
 		</>
 	);
 }

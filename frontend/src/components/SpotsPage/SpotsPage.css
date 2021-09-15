@@ -1,0 +1,11 @@
+#left-container {
+	max-width: 1020px;
+	min-width: 740px;
+	/* background-color: beige; */
+	height: 100000px;
+	padding-right: 24px;
+	padding-left: 24px;
+}
+
+#map-container {
+}

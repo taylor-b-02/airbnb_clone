@@ -1,0 +1,92 @@
+#spot-card-outer {
+	min-width: 792px;
+	max-width: 1005px;
+	height: 250px;
+
+	/* background-color: lightblue; */
+}
+
+#spot-card-border-top {
+	margin-top: 12px;
+	margin-bottom: 24px;
+	border: 1px #ebebeb solid;
+}
+
+#spot-card-border-bottom {
+	margin-top: 24px;
+	margin-bottom: 4px;
+	border: 1px #ebebeb solid;
+}
+
+#spot-card-container {
+	display: flex;
+	flex-direction: row;
+	height: 200px;
+	/* padding: 0px; */
+	/* background-color: white; */
+	/* border: 2px black solid; */
+}
+
+#spot-card-thumbnail {
+	width: 300px;
+	height: 200px;
+	/* margin-top: 25px; */
+	/* margin-bottom: 25px; */
+	margin-right: 16px;
+	/* DELETE LATER, FOR DEV PURPOSES */
+	/* border: 1px black solid; */
+	border-radius: 12px;
+}
+
+#spot-info-container {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	min-width: 476px;
+	/* max-width: 9000000px; */
+}
+
+#spot-name-span {
+	font-size: 18px;
+	line-height: 24px;
+	font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+		Helvetica Neue, sans-serif;
+	color: #222222;
+}
+
+#spot-info-linebreak {
+	margin-top: 11px;
+	width: 32px;
+	border-top: 1px solid #cccccc;
+}
+
+.spot-features-list {
+	margin-top: 9px;
+	font-size: 14px;
+	min-height: 18px;
+	max-height: 18px;
+	font-weight: 400;
+	color: #666666;
+}
+
+#spot-price-container {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+
+	width: 476px;
+	height: 104px;
+
+	color: #222222;
+}
+
+#spot-price {
+	height: 24px;
+	font-size: 18px;
+	line-height: 24px;
+	justify-content: flex-end;
+	margin-bottom: 20px;
+}
+
+#spot-price-span {
+	font-weight: 800;
+}
