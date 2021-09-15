@@ -1,0 +1,13 @@
+#explore-container {
+	display: flex;
+	flex-direction: row;
+}
+
+#explore-text-container {
+	display: flex;
+	flex-direction: column;
+}
+
+#explore-img {
+	width: 64px;
+}
