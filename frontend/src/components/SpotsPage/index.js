@@ -26,6 +26,7 @@ const SpotsPage = () => {
 							key={spot.id}
 							name={spot.name}
 							price={spot.price}
+							spotId={spot.id}
 						/>
 					);
 				})}
