@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import './SpotCard.css';
 
-const SpotCard = () => {
+const SpotCard = ({ name, price }) => {
 	return (
 		<div id="spot-card-outer">
 			<div id="spot-card-border-top" />
@@ -15,18 +15,19 @@ const SpotCard = () => {
 					id="spot-card-thumbnail"
 				/>
 				<div id="spot-info-container">
-					<span id="spot-name-span">Spot Name Here</span>
+					<span id="spot-name-span">{name}</span>
 					<div id="spot-info-linebreak"></div>
 
-					<div class="spot-features-list">
+					<div className="spot-features-list">
 						3 guests &#183; 1 bedroom
 					</div>
-					<div class="spot-features-list">
+					<div className="spot-features-list">
 						Wifi &#183; Indoor Plumbing &#183; Third Thing
 					</div>
 					<div id="spot-price-container">
 						<div id="spot-price">
-							<span id="spot-price-span">$74</span> / night
+							<span id="spot-price-span">{`$${price}`}</span> /
+							night
 						</div>
 					</div>
 				</div>
