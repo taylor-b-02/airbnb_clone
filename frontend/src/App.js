@@ -28,8 +28,14 @@ function App() {
 					</Route>
 				</Switch>
 			)}
-			{/* <Home /> */}
-			<SpotsPage />
+			<Switch>
+				<Route exact path="/">
+					<Home />
+				</Route>
+				<Route path="/spots">
+					<SpotsPage />
+				</Route>
+			</Switch>
 		</>
 	);
 }

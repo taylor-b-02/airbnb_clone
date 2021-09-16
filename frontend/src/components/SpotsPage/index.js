@@ -1,24 +1,34 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import * as spotActions from '../../store/spot';
 import { useDispatch, useSelector } from 'react-redux';
-import { Redirect } from 'react-router-dom';
 import SpotCard from './SpotCard';
 import './SpotsPage.css';
 
 const SpotsPage = () => {
 	const dispatch = useDispatch();
-	const spotsList = useSelector((state) => state.spots);
+	const spotsList = useSelector((state) => state.spot.spots);
 
 	useEffect(() => {
 		dispatch(spotActions.getAllSpots());
-		console.log(spotActions);
-	});
-	console.log('SPOTS LIST?:', spotsList);
+	}, [dispatch]);
+
+	if (!spotsList) return null;
+
 	return (
 		<>
 			<div id="left-container">
 				<h1>Spots</h1>
+				//TODO: DELETE BEFORE DEPLOYMENT
 				<SpotCard />
+				{spotsList.map((spot) => {
+					return (
+						<SpotCard
+							key={spot.id}
+							name={spot.name}
+							price={spot.price}
+						/>
+					);
+				})}
 			</div>
 			<div id="map-container"></div>
 		</>

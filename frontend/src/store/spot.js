@@ -23,11 +23,10 @@ const loadAllSpots = (spots) => {
 	};
 };
 
-const initialState = { spots: null };
+const initialState = { spots: [] };
 
 const spotReducer = (state = initialState, action) => {
 	let newState;
-	console.log('Entered ');
 	switch (action.type) {
 		case CREATE_SPOT:
 			return;
@@ -35,10 +34,7 @@ const spotReducer = (state = initialState, action) => {
 			return;
 		case GET_ALL_SPOTS:
 			newState = Object.assign({}, state);
-			console.log('ACTION.PAYLOAD:', action.payload);
 			newState.spots = action.payload;
-
-			console.log('UPDATED newState:', newState);
 			return newState;
 		default:
 			return state;
