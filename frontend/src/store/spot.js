@@ -1,6 +1,7 @@
 const CREATE_SPOT = 'spot/createSpot';
 const DELETE_SPOT = 'spot/deleteSpot';
 const GET_ALL_SPOTS = 'spot/getAllSpots';
+const GET_SPOT = 'spot/getSpot';
 
 const createSpot = (spotObj) => {
 	return {
@@ -23,7 +24,14 @@ const loadAllSpots = (spots) => {
 	};
 };
 
-const initialState = { spots: [] };
+const loadSingleSpot = (spot) => {
+	return {
+		type: GET_SPOT,
+		payload: spot,
+	};
+};
+
+const initialState = { spots: null, singleSpot: null };
 
 const spotReducer = (state = initialState, action) => {
 	let newState;
@@ -35,6 +43,10 @@ const spotReducer = (state = initialState, action) => {
 		case GET_ALL_SPOTS:
 			newState = Object.assign({}, state);
 			newState.spots = action.payload;
+			return newState;
+		case GET_SPOT:
+			newState = Object.assign({}, state);
+			newState.singleSpot = action.payload;
 			return newState;
 		default:
 			return state;
@@ -49,5 +61,14 @@ export const getAllSpots = () => async (dispatch) => {
 	if (response.ok) {
 		const spots = await response.json();
 		dispatch(loadAllSpots(spots));
+	}
+};
+
+export const getSpotById = (id) => async (dispatch) => {
+	const response = await fetch(`/api/spots/${id}`);
+
+	if (response.ok) {
+		const spot = await response.json();
+		dispatch(loadSingleSpot(spot));
 	}
 };

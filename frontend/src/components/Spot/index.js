@@ -1,19 +1,36 @@
-import React, { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { Redirect } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import * as spotActions from '../../store/spot';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import BookingFormBox from './BookingFormBox';
 import './Spot.css';
 
 const Spot = () => {
 	const { id } = useParams();
+	const dispatch = useDispatch();
+	const spot = useSelector((state) => state.spot.singleSpot);
+
+	useEffect(() => {
+		dispatch(spotActions.getSpotById(id));
+	}, [id, dispatch]);
+
+	if (!spot) return null;
+
 	return (
 		<div id="spot-pageframe">
-			<h1 id="spot-name-h1">NAME HERE</h1>
-			<div id="spot-img-div">Image goes here</div>
+			<div id="spot-heading">
+				<h1 id="spot-name-h1">{spot.name}</h1>
+				<span>{`${spot.city}, ${spot.country}`}</span>
+			</div>
+			<div id="spot-img-div">IMAGE (⌐■_■) HERE 🖼️</div>
 			<div id="spot-info">
-				<div id="spot-info-left"></div>
+				<div id="spot-info-left">
+					<div>Something</div>
+					<div>Something Else</div>
+					<div>Something Third</div>
+				</div>
 				<div id="spot-info-right">
-					<BookingFormBox />
+					<BookingFormBox price={spot.price} />
 				</div>
 			</div>
 		</div>
