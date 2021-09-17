@@ -6,13 +6,13 @@ import BookingFormBox from './BookingFormBox';
 import './Spot.css';
 
 const Spot = () => {
-	const { id } = useParams();
+	const { id: spotId } = useParams();
 	const dispatch = useDispatch();
 	const spot = useSelector((state) => state.spot.singleSpot);
 
 	useEffect(() => {
-		dispatch(spotActions.getSpotById(id));
-	}, [id, dispatch]);
+		dispatch(spotActions.getSpotById(spotId));
+	}, [spotId, dispatch]);
 
 	if (!spot) return null;
 

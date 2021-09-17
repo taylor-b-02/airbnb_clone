@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Redirect } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+
+import * as bookingActions from '../../store/booking';
 import './BookingFormBox.css';
 
-const BookingFormBox = ({ price }) => {
+const BookingFormBox = ({ price, spotId }) => {
+	const dispatch = useDispatch();
+	const sessionUser = useSelector((state) => state.session.user);
+
+	console.log('USERID:', sessionUser);
 	const [startDate, setStartDate] = useState('');
 	const [endDate, setEndDate] = useState('');
 	const [guestCount, setGuestCount] = useState(1);
@@ -14,6 +19,22 @@ const BookingFormBox = ({ price }) => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+
+		if (sessionUser) {
+			const userId = sessionUser.id;
+
+			const bookingInfo = {
+				startDate,
+				endDate,
+				guestCount,
+				userId,
+				spotId,
+			};
+
+			const createdBooking = await dispatch(
+				bookingActions.postBooking(bookingInfo)
+			);
+		}
 	};
 
 	return (
@@ -21,7 +42,7 @@ const BookingFormBox = ({ price }) => {
 			<div id="booking-card-price">
 				<span id="booking-price-span">{`$${price}`}</span> / night
 			</div>
-			<form>
+			<form onSubmit={handleSubmit}>
 				<input
 					type="date"
 					name="startDate"
@@ -40,9 +61,7 @@ const BookingFormBox = ({ price }) => {
 					value={guestCount}
 					onChange={updateGuests}
 				/>
-				<button type="submit" onSubmit={handleSubmit}>
-					Book
-				</button>
+				<button type="submit">Book</button>
 			</form>
 		</div>
 	);

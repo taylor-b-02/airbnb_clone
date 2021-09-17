@@ -14,7 +14,7 @@ const Home = () => {
 				//TODO: Update alt one final pic is finalized
 				alt="Splash Page"
 			/>
-			<span id="explore-nearby-span">Explore Nearby</span>
+			<div id="explore-nearby-span">Explore Nearby</div>
 			<div id="explore-container">
 				<ExploreButton
 					name="New York"
