@@ -28,6 +28,12 @@ const Spot = () => {
 					<div>Something</div>
 					<div>Something Else</div>
 					<div>Something Third</div>
+					<div id="review-outer-container">
+						<div id="review-heading">{`${9000000} reviews`}</div>
+						<div id="review-card-container">
+							{/* <ReviewCard /> */}
+						</div>
+					</div>
 				</div>
 				<div id="spot-info-right">
 					<BookingFormBox price={spot.price} />
