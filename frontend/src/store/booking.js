@@ -1,3 +1,5 @@
+import { csrfFetch } from './csrf';
+
 const CREATE_BOOKING = 'spot/createBooking';
 
 const createBooking = (bookingInfo) => {
@@ -24,7 +26,7 @@ const bookingReducer = (state = initialState, action) => {
 export default bookingReducer;
 
 export const postBooking = (booking) => async (dispatch) => {
-	const response = await fetch('/api/bookings', {
+	const response = await csrfFetch('http://localhost:5000/api/bookings', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify(booking),
