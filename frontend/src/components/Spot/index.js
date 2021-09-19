@@ -6,13 +6,14 @@ import BookingFormBox from './BookingFormBox';
 import './Spot.css';
 
 const Spot = () => {
-	const { id: spotId } = useParams();
+	const { id } = useParams();
+	console.log('ID FROM SPOT PAGE:', id);
 	const dispatch = useDispatch();
 	const spot = useSelector((state) => state.spot.singleSpot);
 
 	useEffect(() => {
-		dispatch(spotActions.getSpotById(spotId));
-	}, [spotId, dispatch]);
+		dispatch(spotActions.getSpotById(id));
+	}, [id, dispatch]);
 
 	if (!spot) return null;
 
@@ -36,7 +37,7 @@ const Spot = () => {
 					</div>
 				</div>
 				<div id="spot-info-right">
-					<BookingFormBox price={spot.price} />
+					<BookingFormBox price={spot.price} spotId={id} />
 				</div>
 			</div>
 		</div>

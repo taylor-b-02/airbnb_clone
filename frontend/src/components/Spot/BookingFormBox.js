@@ -8,7 +8,6 @@ const BookingFormBox = ({ price, spotId }) => {
 	const dispatch = useDispatch();
 	const sessionUser = useSelector((state) => state.session.user);
 
-	console.log('USERID:', sessionUser);
 	const [startDate, setStartDate] = useState('');
 	const [endDate, setEndDate] = useState('');
 	const [guestCount, setGuestCount] = useState(1);
@@ -22,13 +21,13 @@ const BookingFormBox = ({ price, spotId }) => {
 
 		if (sessionUser) {
 			const userId = sessionUser.id;
-
+			console.log('SPOTID BOOKING FORM FILE:', spotId);
 			const bookingInfo = {
 				startDate,
 				endDate,
-				guestCount,
 				userId,
 				spotId,
+				guestCount,
 			};
 
 			const createdBooking = await dispatch(

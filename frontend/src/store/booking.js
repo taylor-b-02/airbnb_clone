@@ -26,10 +26,20 @@ const bookingReducer = (state = initialState, action) => {
 export default bookingReducer;
 
 export const postBooking = (booking) => async (dispatch) => {
-	const response = await csrfFetch('http://localhost:5000/api/bookings', {
+	const { userId, spotId, startDate, endDate } = booking;
+	// console.log('userId:', userId);
+	// console.log('spotId:', spotId);
+	// console.log('startDate:', startDate);
+	// console.log('endDate:', endDate);
+	const response = await csrfFetch('/api/bookings', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
-		body: JSON.stringify(booking),
+		body: JSON.stringify({
+			userId,
+			spotId,
+			startDate,
+			endDate,
+		}),
 	});
 
 	if (response.ok) {
