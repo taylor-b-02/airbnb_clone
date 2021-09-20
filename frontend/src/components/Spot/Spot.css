@@ -62,15 +62,22 @@ body {
 	flex-direction: row;
 
 	max-width: 1128px;
-	height: 10000px;
+	height: 1000px;
 	padding-top: 48px;
+
+	font-size: 16px;
 }
 
 #spot-info-left {
-	border: 3px blue solid;
+	/* border: 3px blue solid; */
 	width: 58.33333%;
 	margin-left: 0%;
 	margin-right: 0%;
+}
+
+#spot-description {
+	padding-top: 32px;
+	padding-bottom: 48px;
 }
 
 #spot-info-right {
@@ -79,4 +86,12 @@ body {
 	width: 33.333333%;
 	margin-left: 8.3333%;
 	margin-right: 0%;
+}
+
+.linebreak-divider {
+	/* border: 1px #ebebeb solid; */
+
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #dddddd;
 }

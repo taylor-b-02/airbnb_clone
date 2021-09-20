@@ -31,9 +31,14 @@ const Spot = () => {
 			</div>
 			<div id="spot-info">
 				<div id="spot-info-left">
-					<div>Something</div>
-					<div>Something Else</div>
-					<div>Something Third</div>
+					<div className="linebreak-divider" />
+					<div id="spot-description">
+						<div>Something</div>
+						<div>Something Else</div>
+						<div>Something Third</div>
+					</div>
+					<div className="linebreak-divider" />
+
 					<div id="review-outer-container">
 						<div id="review-heading">{`${9000000} reviews`}</div>
 						<div id="review-card-container">
