@@ -33,7 +33,7 @@ const SpotCard = ({ name, price, spotId }) => {
 					</div>
 				</div>
 			</Link>
-			<div id="spot-card-border-bottom" />
+			{/* <div id="spot-card-border-bottom" /> */}
 		</div>
 	);
 };

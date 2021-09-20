@@ -18,8 +18,6 @@ const SpotsPage = () => {
 		<>
 			<div id="left-container">
 				<h1>Spots</h1>
-				//TODO: DELETE BEFORE DEPLOYMENT
-				<SpotCard />
 				{spotsList.map((spot) => {
 					return (
 						<SpotCard
