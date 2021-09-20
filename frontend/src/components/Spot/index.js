@@ -23,7 +23,12 @@ const Spot = () => {
 				<h1 id="spot-name-h1">{spot.name}</h1>
 				<span>{`${spot.city}, ${spot.country}`}</span>
 			</div>
-			<div id="spot-img-div">IMAGE (⌐■_■) HERE 🖼️</div>
+			<div id="spot-img-div">
+				<img
+					alt="Spot"
+					src="https://media.architecturaldigest.com/photos/5ec692fe0c3e0ef2c4b32d99/master/pass/SeanLitchfield_LexingtonBK_0139_2.jpg"
+				/>
+			</div>
 			<div id="spot-info">
 				<div id="spot-info-left">
 					<div>Something</div>

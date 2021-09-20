@@ -38,30 +38,43 @@ const BookingFormBox = ({ price, spotId }) => {
 
 	return (
 		<div id="booking-card-container">
-			<div id="booking-card-price">
-				<span id="booking-price-span">{`$${price}`}</span> / night
+			<div id="booking-card-inner-container">
+				<div id="booking-card-price">
+					<span id="booking-price-span">{`$${price}`}</span> / night
+				</div>
+				<form id="booking-form" onSubmit={handleSubmit}>
+					<div id="booking-form-inner-container">
+						<div id="booking-form-date-div">
+							<input
+								type="date"
+								name="startDate"
+								className="date-input"
+								id="date-start"
+								value={startDate}
+								onChange={updateStart}
+							/>
+							<input
+								type="date"
+								name="endDate"
+								className="date-input"
+								id="date-end"
+								value={endDate}
+								onChange={updateEnd}
+							/>
+						</div>
+						{/* <input
+							type="number"
+							name="guestCount"
+							id="guest-input"
+							value={guestCount}
+							onChange={updateGuests}
+						/> */}
+					</div>
+					<button type="submit" id="submit-btn">
+						Book
+					</button>
+				</form>
 			</div>
-			<form onSubmit={handleSubmit}>
-				<input
-					type="date"
-					name="startDate"
-					value={startDate}
-					onChange={updateStart}
-				/>
-				<input
-					type="date"
-					name="endDate"
-					value={endDate}
-					onChange={updateEnd}
-				/>
-				<input
-					type="number"
-					name="guestCount"
-					value={guestCount}
-					onChange={updateGuests}
-				/>
-				<button type="submit">Book</button>
-			</form>
 		</div>
 	);
 };

@@ -23,21 +23,38 @@ body {
 
 	display: flex;
 	flex-direction: column;
-
-	border: 2px black solid;
 }
 
 #spot-name-h1 {
-	font-size: 1em;
+	color: #222222;
+	font-size: 26px;
+	line-height: 30px;
 	font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
 		Helvetica Neue, sans-serif !important;
 	margin: 0px;
 	padding: 0px;
 }
 
+#spot-heading > span {
+	margin-top: 4px;
+
+	color: #717171;
+}
+
 #spot-img-div {
-	border: 2px black solid;
-	max-width: 1128px;
+	border: 0px;
+	border-radius: 12px;
+	width: 1128px;
+
+	max-height: 564px;
+	padding-top: 24px;
+}
+
+#spot-img-div > img {
+	width: 1128px;
+	max-height: 564px;
+
+	border-radius: 12px;
 }
 
 #spot-info {
@@ -46,7 +63,7 @@ body {
 
 	max-width: 1128px;
 	height: 10000px;
-	border: 3px black solid;
+	padding-top: 48px;
 }
 
 #spot-info-left {
@@ -60,7 +77,6 @@ body {
 	position: relative;
 	/* POSITION FOR THE BOOKING FORM ITSELF SHOULD BE STICKY" */
 	width: 33.333333%;
-	border: 3px red solid;
 	margin-left: 8.3333%;
 	margin-right: 0%;
 }

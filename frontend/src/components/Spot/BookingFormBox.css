@@ -3,6 +3,100 @@
 	top: 80px;
 	z-index: 1;
 	width: 100%;
+	/* height: 275px; USE WHEN GUEST COUNT IS IMPLEMENTED */
+	height: 230px;
 	padding-right: 1px;
 	box-sizing: border-box;
+
+	border: 1px solid #dddddd;
+	border-radius: 12px;
+	box-shadow: #0000001f 0px 6px 16px;
+
+	display: flex;
+	flex-direction: column;
+}
+
+#booking-card-inner-container {
+	padding: 24px;
+	box-sizing: border-box;
+}
+
+#booking-card-price {
+	font-size: 22px;
+	line-height: 26px;
+
+	margin-bottom: 24px;
+}
+
+#booking-price-span {
+	font-weight: 600;
+}
+
+#booking-form {
+	color: #333333;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+#booking-form-inner-container {
+	box-sizing: border-box;
+
+	margin-bottom: 16px;
+}
+
+#booking-form-date-div {
+	display: flex;
+	flex-direction: row;
+
+	border-radius: 8px;
+}
+
+.date-input {
+	width: 100%;
+	height: 56px;
+
+	border: 1px #b0b0b0 solid;
+}
+
+#date-start {
+	/* border-top-right-radius: 0px; */
+	/* border-bottom-right-radius: 0px; */
+
+	border-radius: 8px 0px 0px 8px;
+	border-right-width: 0.5px;
+}
+
+#date-end {
+	/* border-top-left-radius: 0px; */
+	/* border-bottom-left-radius: 0px; */
+
+	border-radius: 0px 8px 8px 0px;
+	border-left-width: 0.5px;
+}
+
+#guest-input {
+	/* width: 216px; */
+	width: 100%;
+	height: 56px;
+
+	border: 1px #b0b0b0 solid;
+	border-radius: 8px;
+}
+
+#submit-btn {
+	box-sizing: border-box;
+
+	width: 100%;
+	height: 48px;
+
+	background-color: #e61f51;
+
+	border: 0px;
+	border-radius: 8px;
+
+	color: white;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 600;
 }
