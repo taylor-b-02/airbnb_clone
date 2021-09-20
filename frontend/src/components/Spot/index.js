@@ -40,7 +40,7 @@ const Spot = () => {
 					<div className="linebreak-divider" />
 
 					<div id="review-outer-container">
-						<div id="review-heading">{`${9000000} reviews`}</div>
+						{/* <div id="review-heading">{`${9000000} reviews`}</div> */}
 						<div id="review-card-container">
 							{/* <ReviewCard /> */}
 						</div>
