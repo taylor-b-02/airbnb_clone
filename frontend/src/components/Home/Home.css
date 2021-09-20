@@ -1,6 +1,8 @@
 #explore-container {
 	display: flex;
-	flex-direction: row;
+	flex-direction: row-;
+	flex-wrap: wrap;
+	max-width: 1300px;
 	/* display: grid;
 	column-count: 4; */
 }
@@ -17,4 +19,8 @@
 #main-pic {
 	width: 100%;
 	/* min-width: 1128px; */
+}
+
+#explore-button {
+	margin-bottom: 16px;
 }

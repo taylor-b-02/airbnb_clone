@@ -20,15 +20,17 @@ function Navigation({ isLoaded }) {
 	}
 
 	return (
-		<ul>
-			<Link to="/">AirBnB</Link>
-			<li>
-				<NavLink exact to="/">
-					Home
-				</NavLink>
-				{isLoaded && sessionLinks}
-			</li>
-		</ul>
+		<div id="nav-div-container">
+			<div id="nav-div-inner">
+				<div>
+					<NavLink exact to="/" id="home-link">
+						AirBnB
+					</NavLink>
+				</div>
+				<div id="spacer-div" />
+				<div id="other-links">{isLoaded && sessionLinks}</div>
+			</div>
+		</div>
 	);
 }
 

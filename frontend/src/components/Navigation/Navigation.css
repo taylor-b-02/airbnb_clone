@@ -1,0 +1,30 @@
+#nav-div-container {
+	margin-left: 100px;
+	/* margin-bottom: 200px; */
+	height: 50px;
+	/* width: 100%; */
+	min-width: 1128px;
+	display: flex;
+	flex-direction: row;
+	box-sizing: border-box;
+}
+
+#nav-div-inner {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	font-size: 24px;
+}
+#home-link {
+	/* font-size: 32px; */
+}
+
+#other-links {
+	justify-self: flex-end;
+	z-index: 1;
+	background-color: white;
+}
+
+#spacer-div {
+	width: 1800px;
+}
