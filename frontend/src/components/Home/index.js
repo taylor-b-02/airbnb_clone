@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 // import * as sessionActions from '../../store/session';
 // import { useDispatch, useSelector } from 'react-redux';
-import { Redirect } from 'react-router-dom';
 import ExploreButton from './ExploreButton';
 import './Home.css';
 
@@ -11,7 +10,6 @@ const Home = () => {
 			<img
 				src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
 				id="main-pic"
-				//TODO: Update alt one final pic is finalized
 				alt="Splash Page"
 			/>
 			<div id="explore-nearby-span">Explore Nearby</div>

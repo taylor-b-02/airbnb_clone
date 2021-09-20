@@ -86,7 +86,6 @@ router.post(
 	})
 );
 
-//TODO: Double check auth to make sure only the host can update a spot
 // Update a spot
 router.put(
 	'/:id(\\d+)',
@@ -129,4 +128,20 @@ router.delete(
 	})
 );
 
+// Get all of a hosts spots
+router.get(
+	'/host/:hostId(\\d+)',
+	requireAuth,
+	asyncHandler(async (req, res, next) => {
+		const { hostId } = req.params;
+
+		const spots = await Spot.findAll({
+			where: {
+				hostId: hostId,
+			},
+		});
+
+		return res.json(spots);
+	})
+);
 module.exports = router;

@@ -4,6 +4,7 @@ const CREATE_SPOT = 'spot/createSpot';
 const DELETE_SPOT = 'spot/deleteSpot';
 const GET_ALL_SPOTS = 'spot/getAllSpots';
 const GET_SPOT = 'spot/getSpot';
+const GET_HOSTED_SPOTS = 'spot/getHostedSpots';
 
 const createSpot = (spotObj) => {
 	return {
@@ -33,6 +34,13 @@ const loadSingleSpot = (spot) => {
 	};
 };
 
+const loadHostedSpots = (spots) => {
+	return {
+		type: GET_HOSTED_SPOTS,
+		payload: spots,
+	};
+};
+
 const initialState = { spots: null, singleSpot: null };
 
 const spotReducer = (state = initialState, action) => {
@@ -47,7 +55,13 @@ const spotReducer = (state = initialState, action) => {
 			}
 			return newState;
 		case DELETE_SPOT:
-			return;
+			newState = Object.assign({}, state);
+			newState.spots.forEach((spot, idx) => {
+				if (spot.id === action.payload) {
+					newState.spots.splice(idx, 1);
+				}
+			});
+			return newState;
 		case GET_ALL_SPOTS:
 			newState = Object.assign({}, state);
 			newState.spots = action.payload;
@@ -55,6 +69,10 @@ const spotReducer = (state = initialState, action) => {
 		case GET_SPOT:
 			newState = Object.assign({}, state);
 			newState.singleSpot = action.payload;
+			return newState;
+		case GET_HOSTED_SPOTS:
+			newState = Object.assign({}, state);
+			newState.spots = action.payload;
 			return newState;
 		default:
 			return state;
@@ -84,7 +102,6 @@ export const getSpotById = (id) => async (dispatch) => {
 export const postSpot = (spot) => async (dispatch) => {
 	const { hostId, address, city, state, country, lat, lng, name, price } =
 		spot;
-	console.log('SPOT IN REDUCER:', spot);
 	const response = await csrfFetch('/api/spots', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
@@ -106,4 +123,25 @@ export const postSpot = (spot) => async (dispatch) => {
 		dispatch(createSpot(newSpot));
 		return newSpot;
 	}
+};
+
+export const getHostedSpots = (id) => async (dispatch) => {
+	const response = await fetch(`/api/spots/host/${id}`);
+
+	if (response.ok) {
+		const spots = await response.json();
+		dispatch(loadHostedSpots(spots));
+		return spots;
+	}
+};
+
+export const deleteSpotById = (id) => async (dispatch) => {
+	const response = await csrfFetch(`/api/spots/${id}`, {
+		method: 'DELETE',
+	});
+
+	if (response.ok) {
+		dispatch(deleteSpot(id));
+	}
+	return;
 };

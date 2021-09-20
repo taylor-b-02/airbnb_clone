@@ -10,6 +10,7 @@ import SpotsPage from './components/SpotsPage';
 import Spot from './components/Spot';
 import SpotCreationPage from './components/SpotCreationPage';
 import BookingsPage from './components/BookingsPage';
+import HostPage from './components/HostPage';
 
 function App() {
 	const dispatch = useDispatch();
@@ -48,7 +49,7 @@ function App() {
 					<BookingsPage />
 				</Route>
 				<Route path="/host">
-					<></>
+					<HostPage />
 				</Route>
 			</Switch>
 		</>

@@ -45,6 +45,9 @@ function ProfileButton({ user }) {
 						<Link to="/host">My Spots</Link>
 					</li>
 					<li>
+						<Link to="/spots/create">List a Spot</Link>
+					</li>
+					<li>
 						<button onClick={logout}>Log Out</button>
 					</li>
 				</ul>
