@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Redirect } from 'react-router-dom';
 import './SpotCard.css';
 
 const SpotCard = ({ name, price, spotId }) => {

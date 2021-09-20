@@ -30,9 +30,10 @@ const BookingFormBox = ({ price, spotId }) => {
 				// guestCount,
 			};
 
-			const createdBooking = await dispatch(
-				bookingActions.postBooking(bookingInfo)
-			);
+			// const createdBooking = await dispatch(
+			// 	bookingActions.postBooking(bookingInfo)
+			// );
+			await dispatch(bookingActions.postBooking(bookingInfo));
 		}
 	};
 

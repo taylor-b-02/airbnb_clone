@@ -9,6 +9,7 @@ import Home from './components/Home';
 import SpotsPage from './components/SpotsPage';
 import Spot from './components/Spot';
 import SpotCreationPage from './components/SpotCreationPage';
+import BookingsPage from './components/BookingsPage';
 
 function App() {
 	const dispatch = useDispatch();
@@ -42,6 +43,12 @@ function App() {
 				</Route>
 				<Route path="/spots/:id">
 					<Spot />
+				</Route>
+				<Route path="/my-bookings">
+					<BookingsPage />
+				</Route>
+				<Route path="/host">
+					<></>
 				</Route>
 			</Switch>
 		</>

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 // import * as sessionActions from '../../store/session';
 // import { useDispatch, useSelector } from 'react-redux';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './ExploreButton.css';
 
 const ExploreButton = ({ name, travelTime, imageURL }) => {
