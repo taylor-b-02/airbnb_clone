@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 import * as spotActions from '../../store/spot';
 import './SpotCreationPage.css';
@@ -7,6 +8,7 @@ import './SpotCreationPage.css';
 const SpotCreationPage = () => {
 	const dispatch = useDispatch();
 	const sessionUser = useSelector((state) => state.session.user);
+	const history = useHistory();
 
 	const [address, setAddress] = useState('');
 	const [city, setCity] = useState('');
@@ -43,8 +45,10 @@ const SpotCreationPage = () => {
 				name,
 				price,
 			};
-			console.log('FRONTEND spotInfo:', spotInfo);
-			await dispatch(spotActions.postSpot(spotInfo));
+
+			const response = await dispatch(spotActions.postSpot(spotInfo));
+
+			if (response) history.push('/spots');
 		}
 	};
 

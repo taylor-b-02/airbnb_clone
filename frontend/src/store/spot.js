@@ -39,7 +39,13 @@ const spotReducer = (state = initialState, action) => {
 	let newState;
 	switch (action.type) {
 		case CREATE_SPOT:
-			return;
+			newState = Object.assign({}, state);
+			if (newState.spots != null) {
+				newState.spots.push(action.payload);
+			} else {
+				newState.spots = [action.payload];
+			}
+			return newState;
 		case DELETE_SPOT:
 			return;
 		case GET_ALL_SPOTS:
