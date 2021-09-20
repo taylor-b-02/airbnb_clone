@@ -27,10 +27,7 @@ export default bookingReducer;
 
 export const postBooking = (booking) => async (dispatch) => {
 	const { userId, spotId, startDate, endDate } = booking;
-	// console.log('userId:', userId);
-	// console.log('spotId:', spotId);
-	// console.log('startDate:', startDate);
-	// console.log('endDate:', endDate);
+
 	const response = await csrfFetch('/api/bookings', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
