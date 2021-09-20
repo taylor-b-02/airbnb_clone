@@ -1,3 +1,5 @@
+import { csrfFetch } from './csrf';
+
 const CREATE_SPOT = 'spot/createSpot';
 const DELETE_SPOT = 'spot/deleteSpot';
 const GET_ALL_SPOTS = 'spot/getAllSpots';
@@ -70,5 +72,32 @@ export const getSpotById = (id) => async (dispatch) => {
 	if (response.ok) {
 		const spot = await response.json();
 		dispatch(loadSingleSpot(spot));
+	}
+};
+
+export const postSpot = (spot) => async (dispatch) => {
+	const { hostId, address, city, state, country, lat, lng, name, price } =
+		spot;
+	console.log('SPOT IN REDUCER:', spot);
+	const response = await csrfFetch('/api/spots', {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify({
+			hostId,
+			address,
+			city,
+			state,
+			country,
+			lat,
+			lng,
+			name,
+			price,
+		}),
+	});
+
+	if (response.ok) {
+		const newSpot = await response.json();
+		dispatch(createSpot(newSpot));
+		return newSpot;
 	}
 };

@@ -10,24 +10,24 @@ const BookingFormBox = ({ price, spotId }) => {
 
 	const [startDate, setStartDate] = useState('');
 	const [endDate, setEndDate] = useState('');
-	const [guestCount, setGuestCount] = useState(1);
+	// const [guestCount, setGuestCount] = useState(1);
 
 	const updateStart = (e) => setStartDate(e.target.value);
 	const updateEnd = (e) => setEndDate(e.target.value);
-	const updateGuests = (e) => setGuestCount(e.target.value);
+	// const updateGuests = (e) => setGuestCount(e.target.value);
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
 		if (sessionUser) {
 			const userId = sessionUser.id;
-			console.log('SPOTID BOOKING FORM FILE:', spotId);
+
 			const bookingInfo = {
 				startDate,
 				endDate,
 				userId,
 				spotId,
-				guestCount,
+				// guestCount,
 			};
 
 			const createdBooking = await dispatch(

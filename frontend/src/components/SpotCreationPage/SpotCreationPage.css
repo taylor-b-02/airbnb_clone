@@ -1,0 +1,23 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#spot-creation-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+}
+
+#spot-creation-left-container {
+	min-width: 744px;
+	width: 50%;
+	height: 1000px;
+	background-color: blueviolet;
+}
+
+#spot-creation-right-container {
+	min-width: 744px;
+	width: 50%;
+}

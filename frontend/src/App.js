@@ -8,6 +8,7 @@ import Navigation from './components/Navigation';
 import Home from './components/Home';
 import SpotsPage from './components/SpotsPage';
 import Spot from './components/Spot';
+import SpotCreationPage from './components/SpotCreationPage';
 
 function App() {
 	const dispatch = useDispatch();
@@ -36,11 +37,11 @@ function App() {
 				<Route exact path="/spots">
 					<SpotsPage />
 				</Route>
+				<Route exact path="/spots/create">
+					<SpotCreationPage />
+				</Route>
 				<Route path="/spots/:id">
 					<Spot />
-				</Route>
-				<Route exact path="/spots/create">
-					CREATE
 				</Route>
 			</Switch>
 		</>
