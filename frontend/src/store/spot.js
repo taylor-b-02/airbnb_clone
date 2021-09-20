@@ -5,10 +5,18 @@ const DELETE_SPOT = 'spot/deleteSpot';
 const GET_ALL_SPOTS = 'spot/getAllSpots';
 const GET_SPOT = 'spot/getSpot';
 const GET_HOSTED_SPOTS = 'spot/getHostedSpots';
+const EDIT_SPOT = 'spot/editSpot';
 
 const createSpot = (spotObj) => {
 	return {
 		type: CREATE_SPOT,
+		payload: spotObj,
+	};
+};
+
+const editSpotById = (spotObj) => {
+	return {
+		type: EDIT_SPOT,
 		payload: spotObj,
 	};
 };
@@ -144,4 +152,30 @@ export const deleteSpotById = (id) => async (dispatch) => {
 		dispatch(deleteSpot(id));
 	}
 	return;
+};
+
+export const editSpot = (spot) => async (dispatch) => {
+	const { hostId, address, city, state, country, lat, lng, name, price } =
+		spot;
+	const response = await csrfFetch(`/api/spots/${spot.id}`, {
+		method: 'PUT',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify({
+			hostId,
+			address,
+			city,
+			state,
+			country,
+			lat,
+			lng,
+			name,
+			price,
+		}),
+	});
+
+	if (response.ok) {
+		const editedSpot = await response.json();
+		dispatch(editSpotById(editedSpot));
+		return editedSpot;
+	}
 };

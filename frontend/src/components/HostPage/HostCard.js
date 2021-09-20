@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
 
 import * as spotActions from '../../store/spot';
-import HostPage from './HostPage.css';
+import './HostPage.css';
 const HostCard = ({ spotName, price, spotId }) => {
 	const dispatch = useDispatch();
 	const history = useHistory();
@@ -15,7 +15,7 @@ const HostCard = ({ spotName, price, spotId }) => {
 
 	const handleEdit = (e) => {
 		e.preventDefault();
-		history.push(`/spot/edit${spotId}`);
+		history.push(`/spot/edit/${spotId}`);
 	};
 
 	return (
