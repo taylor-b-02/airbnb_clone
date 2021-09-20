@@ -1,0 +1,18 @@
+#bookings-list-card {
+	display: flex;
+	flex-direction: row;
+}
+
+#booking-card-thumbnail {
+	width: 150px;
+	height: 100px;
+
+	margin-right: 16px;
+	border-radius: 12px;
+}
+
+#booking-name-span {
+	font-size: 24px;
+	font-weight: 600;
+	margin-right: 16px;
+}
