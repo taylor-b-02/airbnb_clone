@@ -2,7 +2,8 @@
 node_modules
 
 # Ignore environment variables
-*.env
+.env
+backend/.env
 
 # Ignore
 build
