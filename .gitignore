@@ -1,4 +1,11 @@
+# Ignore node_modules
 node_modules
-.env
+
+# Ignore environment variables
+*.env
+
+# Ignore
 build
 .DS_Store
+.idea/
+.vscode/
