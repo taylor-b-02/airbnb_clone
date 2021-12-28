@@ -1,0 +1,55 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+
+    min-height: 100%;
+}
+
+#upperContainer {
+    
+}
+
+#contentContainer {
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+
+    background-color: black;
+    width: 0px;
+    box-sizing: border-box;
+}
+
+#mainImage {
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    object-fit: cover;
+    object-position: center;
+    vertical-align: bottom;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+#footerContainer {
+
+}
+/*2080, 1440, 1128, 744, 375*/
+@media screen and (min-width: 744px) {
+    #upperContainer {
+        width: 0px;
+    }
+
+    #contentContainer {
+        max-width: 1280px;
+        min-width: 1280px;
+        min-height: 100%;
+    }
+
+    #footerContainer {
+        width: 0px;
+    }
+}
