@@ -5,15 +5,20 @@ import ExploreButton from './ExploreButton';
 import css from './Home.module.css';
 
 const Home = () => {
-	return (
-		<div id={css.container}>
-			<div id={css.upperContainer}></div>
-			<div id={css.contentContainer}>
-				<img id={css.mainImage} src="https://a0.muscache.com/im/pictures/53e51dcb-8fad-4ce8-b61c-8a7a369267bf.jpg?im_q=highq&im_w=1920"/>
-			</div>
-			<footer id={css.footerContainer}></footer>
-		</div>
-	);
+    return (
+        <div id={css.container}>
+            <div id={css.nav}></div>
+            <div id={css.contentContainer}>
+                <img id={css.mainImage}
+                     src="https://a0.muscache.com/im/pictures/53e51dcb-8fad-4ce8-b61c-8a7a369267bf.jpg?im_q=highq&im_w=1920"/>
+                <div id={css.imageHeader}>
+                    <div id={css.imageText}>Not sure where to go? Perfect.</div>
+                    <button id={css.imageButton}><span id={css.imageButtonText}>I'm flexible</span></button>
+                </div>
+            </div>
+            <footer id={css.footerContainer}></footer>
+        </div>
+    );
 };
 
 export default Home;
