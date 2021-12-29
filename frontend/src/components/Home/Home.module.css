@@ -51,9 +51,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    /*top: 130%;*/
-    bottom: -5%;
+    position: relative;
+    top: -35%;
+    /*bottom: -5%;*/
     left: 0;
     right: 0;
     background: none;
@@ -74,7 +74,7 @@
 
 #imageButton {
     box-sizing: border-box;
-    background-color: white;
+    background-color: #FFFFFF;
     outline: 0;
     border: #FFFFFF none;
     border-radius: 1000px;
@@ -85,6 +85,19 @@
     margin-top: 16px;
 
     font-size: 18px;
+
+    cursor: pointer;
+}
+
+#imageButton:hover {
+    background-color: #F1F1F1;
+}
+
+#imageButton:active {
+    /*height: 52px;*/
+    /*width: 148px;*/
+    /*font-size: 12px;*/
+    transform: scale(0.94);
 }
 
 #imageButtonText {
