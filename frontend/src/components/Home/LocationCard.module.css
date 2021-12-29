@@ -1,0 +1,57 @@
+.locationCard {
+    display: flex;
+    flex-direction: column;
+
+    height: 402px;
+    width: 302px;
+
+    /*border: #e61f51 2px solid;*/
+
+    /*margin-left: 8px;*/
+    /*margin-right: 8px;*/
+
+    border-radius: 12px;
+
+    cursor: pointer;
+}
+
+.locationCardImage {
+    border-radius: 12px 12px 0 0;
+    height: 202px;
+    width: 302px;
+}
+
+.locationTextContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px 16px;
+
+    width: 270px;
+    height: 162px;
+
+    color: white;
+}
+
+.locationCardCity {
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+    /*padding-top: 24px;*/
+    /*padding-left: 16px;*/
+    height: 51px;
+    line-height: 39px;
+    padding-bottom: 12px;
+    box-sizing: border-box;
+
+}
+
+.locationCardDistance {
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: normal;
+    line-break: strict;
+    white-space: pre-line;
+}

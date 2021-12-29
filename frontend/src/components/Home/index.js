@@ -2,6 +2,7 @@ import React from 'react';
 // import * as sessionActions from '../../store/session';
 // import { useDispatch, useSelector } from 'react-redux';
 // import ExploreButton from './ExploreButton';
+import LocationCard from "./LocationCard";
 import css from './Home.module.css';
 
 const Home = () => {
@@ -21,39 +22,10 @@ const Home = () => {
                 <div className={css.contentCard} id={css.locationCardContainer}>
                     <span id={css.locationHeader}>Inspiration for your next trip</span>
                     <div id={css.locationCardWrapper}>
-                        {/*https://a0.muscache.com/im/pictures/1cdb5298-1e10-4d5a-ac27-20c80b53b4af.jpg?im_w=320 1x, https://a0.muscache.com/im/pictures/1cdb5298-1e10-4d5a-ac27-20c80b53b4af.jpg?im_w=720 2x*/}
-                        {/*<div className={css.locationCard}><img src={"https://a0.muscache.com/im/pictures/1cdb5298-1e10-4d5a-ac27-20c80b53b4af.jpg?im_w=720"} id={css.locationCardImage}/> Scranton</div>*/}
-                        <div className={css.locationCard} id={css.location1}>
-                            <img
-                                src={"https://a0.muscache.com/im/pictures/1cdb5298-1e10-4d5a-ac27-20c80b53b4af.jpg?im_w=320"}
-                                className={css.locationCardImage}
-                                alt={"Lake surrounded by mountains"}
-                            />
-                            <div className={css.locationTextContainer}>
-                                <div className={css.locationCardCity}>Scranton</div>
-                                <div className={css.locationCardDistance}>{69} miles away</div>
-                            </div>
-                        </div>
-                        <div className={css.locationCard} id={css.location2}>
-                            <img
-                                src={"https://a0.muscache.com/im/pictures/1cdb5298-1e10-4d5a-ac27-20c80b53b4af.jpg?im_w=320"}
-                                id={css.locationCardImage}
-                                alt={"Lake surrounded by mountains"}
-                            /></div>
-                        <div className={css.locationCard} id={css.location3}>
-                            <img
-                                src={"https://a0.muscache.com/im/pictures/1cdb5298-1e10-4d5a-ac27-20c80b53b4af.jpg?im_w=320"}
-                                id={css.locationCardImage}
-                                alt={"Lake surrounded by mountains"}
-                            />
-                        </div>
-                        <div className={css.locationCard} id={css.location4}>
-                            <img
-                                src={"https://a0.muscache.com/im/pictures/1cdb5298-1e10-4d5a-ac27-20c80b53b4af.jpg?im_w=320"}
-                                id={css.locationCardImage}
-                                alt={"Lake surrounded by mountains"}
-                            />
-                        </div>
+                        <LocationCard  bgColor={"#BC196D"} name={"Scranton"} distance={69}/>
+                        <LocationCard  bgColor={"#DD3150"} name={"New York"} distance={69}/>
+                        <LocationCard  bgColor={"#CC2D4A"} name={"Third Thing"} distance={69}/>
+                        <LocationCard  bgColor={"#D93A30"} name={"Los Angeles"} distance={69}/>
                     </div>
                 </div>
             </div>
