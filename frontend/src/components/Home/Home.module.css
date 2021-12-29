@@ -1,16 +1,46 @@
 #container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     background-color: black;
 
-    min-width: 100%;
+    min-width: 100vw;
     min-height: 100%;
 }
 
-#nav {
+#upperBackground {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
+    /*background-color: #FFFFFF;*/
+    background-color: #000000;
+
+    min-height: 714px;
+    max-height: 954px;
+    min-width: 100%;
+
+    z-index: 2;
+}
+
+#lowerBackground {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: #FFFFFF;
+
+    min-height: 100vh;
+    min-width: 100%;
+
+    z-index: 0;
+}
+
+#nav {
+    background-color: #000000;
 }
 
 #contentContainer {
@@ -19,9 +49,11 @@
     /*justify-content: center;*/
     align-items: center;
 
-    background-color: black;
-    width: 0;
+    /*background-color: black;*/
+    /*width: 0;*/
     box-sizing: border-box;
+
+    z-index: 2;
 }
 
 .contentCard {
@@ -116,6 +148,7 @@
     background-color: #F1F1F1;
 
     margin-top: 96px;
+    height: 472px;
 }
 
 #leftGCContainer {
@@ -124,9 +157,10 @@
     align-items: center;
     justify-content: center;
 
-    width: 480px;
+    /*width: 480px;*/
+    width: 472px;
     height: 480px;
-    margin: 80px;
+    margin: 0 80px 80px;
 }
 
 #littleHeaderGC {
@@ -155,7 +189,10 @@
 
     box-sizing: border-box;
     margin-bottom: 24px;
+
+    width: 410px;
 }
+
 #GCButton {
     display: flex;
     justify-content: center;
