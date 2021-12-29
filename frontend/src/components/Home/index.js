@@ -19,6 +19,16 @@ const Home = () => {
                         <button id={css.imageButton}><span id={css.imageButtonText}>I'm flexible</span></button>
                     </div>
                 </div>
+                <div className={css.contentCard} id={css.giftCardContainer}>
+                    <div id={css.leftGCContainer}>
+                        <div id={css.littleHeaderGC}>Introducing</div>
+                        <div id={css.bigHeaderGC}>Airbnb gift cards</div>
+                        <div id={css.GCButton}>
+                            <span id={css.GBButtonText}>Shop now</span>
+                        </div>
+                    </div>
+                    <div id={css.rightGCContainer}></div>
+                </div>
                 <div className={css.contentCard} id={css.locationCardContainer}>
                     <span id={css.locationHeader}>Inspiration for your next trip</span>
                     <div id={css.locationCardWrapper}>

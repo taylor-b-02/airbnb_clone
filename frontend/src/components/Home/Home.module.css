@@ -29,7 +29,6 @@
     width: 1280px;
     height: 640px;
     box-sizing: border-box;
-    /*border: #FFFFFF 2px solid;*/
 }
 
 #mainImage {
@@ -53,7 +52,6 @@
     align-items: center;
     position: relative;
     top: -35%;
-    /*bottom: -5%;*/
     left: 0;
     right: 0;
     background: none;
@@ -94,9 +92,6 @@
 }
 
 #imageButton:active {
-    /*height: 52px;*/
-    /*width: 148px;*/
-    /*font-size: 12px;*/
     transform: scale(0.94);
 }
 
@@ -115,6 +110,87 @@
     /*overflow: clip !important;*/
 
     /*color: #222222;*/
+}
+
+#giftCardContainer {
+    background-color: #F1F1F1;
+
+    margin-top: 96px;
+}
+
+#leftGCContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 480px;
+    height: 480px;
+    margin: 80px;
+}
+
+#littleHeaderGC {
+    color: #222222;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    letter-spacing: normal;
+    white-space: pre-line;
+    text-align: center;
+    line-break: strict;
+
+    box-sizing: border-box;
+}
+
+#bigHeaderGC {
+    color: #222222;
+    font-size: 95px;
+    line-height: 98px;
+    font-weight: 600;
+    letter-spacing: -1.9px;
+    white-space: pre-line;
+    text-align: center;
+    line-break: strict;
+    overflow-wrap: anywhere;
+
+    box-sizing: border-box;
+    margin-bottom: 24px;
+}
+#GCButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    width: 122px;
+    height: 48px;
+    border-radius: 8px;
+
+    background-color: #222222;
+
+    cursor: pointer;
+}
+
+#GCButton:hover {
+    background-color: #000000;
+}
+
+
+#GBButtonText {
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-break: strict;
+
+    box-sizing: border-box;
+
+}
+
+#rightGCContainer {
+
 }
 
 #locationCardContainer {
