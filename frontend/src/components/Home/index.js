@@ -10,7 +10,7 @@ const Home = () => {
         <div id={css.container}>
             <div id={css.lowerBackground}>
                 <div id={css.upperBackground}>
-                    {/*<div id={css.nav}>Nav</div>*/}
+                    <div id={css.nav}>Nav</div>
                     <div id={css.contentContainer}>
                         <div className={css.contentCard}>
                             <img id={css.mainImage}
