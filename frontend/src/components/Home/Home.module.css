@@ -272,7 +272,9 @@
 }
 
 #footerContainer {
-
+    background-color: #FFFFFF;
+    color: red;
+    height: 50px;
 }
 
 /*2080, 1440, 1128, 744, 375*/

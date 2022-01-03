@@ -40,12 +40,13 @@ const Home = () => {
                                 <LocationCard bgColor={"#D93A30"} name={"Los Angeles"} distance={69}/>
                             </div>
                         </div>
+                        <footer id={css.footerContainer}>Foot</footer>
                     </div>
                 </div>
             </div>
-            <footer id={css.footerContainer}>Foot</footer>
         </div>
-    );
+    )
+        ;
 };
 
 export default Home;
