@@ -1,4 +1,5 @@
 #container {
+    margin-top: 176px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -6,7 +7,7 @@
     background-color: black;
 
     min-width: 100vw;
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 #upperBackground {

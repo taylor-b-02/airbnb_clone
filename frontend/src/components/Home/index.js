@@ -10,7 +10,6 @@ const Home = () => {
         <div id={css.container}>
             <div id={css.lowerBackground}>
                 <div id={css.upperBackground}>
-                    <div id={css.nav}>Nav</div>
                     <div id={css.contentContainer}>
                         <div className={css.contentCard}>
                             <img id={css.mainImage}
@@ -34,10 +33,10 @@ const Home = () => {
                         <div className={css.contentCard} id={css.locationCardContainer}>
                             <span id={css.locationHeader}>Inspiration for your next trip</span>
                             <div id={css.locationCardWrapper}>
-                                <LocationCard bgColor={"#BC196D"} name={"Scranton"} distance={69}/>
-                                <LocationCard bgColor={"#DD3150"} name={"New York"} distance={69}/>
-                                <LocationCard bgColor={"#CC2D4A"} name={"Third Thing"} distance={69}/>
-                                <LocationCard bgColor={"#D93A30"} name={"Los Angeles"} distance={69}/>
+                                <LocationCard bgColor={"#BC196D"} name={"Scranton"} distance={68}/>
+                                <LocationCard bgColor={"#DD3150"} name={"New York"} distance={68}/>
+                                <LocationCard bgColor={"#CC2D4A"} name={"Third Thing"} distance={68}/>
+                                <LocationCard bgColor={"#D93A30"} name={"Los Angeles"} distance={68}/>
                             </div>
                         </div>
                         <footer id={css.footerContainer}>Foot</footer>

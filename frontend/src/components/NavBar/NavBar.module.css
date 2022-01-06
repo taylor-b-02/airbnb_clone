@@ -1,7 +1,65 @@
 #container {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 
-    height: 80px;
-    width: 100vw;
+    min-height: 80px;
+    max-height: 80px;
+    /*width: 100vw;*/
+    max-width: 1600px;
+    padding-left: 80px;
+    padding-right: 80px;
+
+    background-color: #FFFFFF;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#logoDiv {
+    width: 626px;
+}
+
+#globeDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 46px;
+    height: 42px;
+}
+
+#globeDiv:hover {
+    /*background-color: #2B2B2B;*/
+    background-color: #F7F7F7;
+}
+
+#profileDiv {
+    box-sizing: border-box;
+
+    width: 77px;
+    height: 42px;
+    padding: 5px 5px 5px 12px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #DDDDDD;
+    border-radius: 22px;
+
+    display: flex;
+    align-items: center;
+}
+
+#profileDiv:hover {
+    box-shadow: 0 2px 4px rgb(0 0 0 / 18%);
+    transition: box-shadow 0.2s ease;
+}
+
+#menuSVG {}
+
+#profileSVG {
+    margin-left: 12px;
 }

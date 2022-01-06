@@ -11,3 +11,9 @@ body {
     background-color: black;
     background-color: white;
 }
+
+#root {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
