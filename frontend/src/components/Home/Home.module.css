@@ -146,10 +146,14 @@
 }
 
 #giftCardContainer {
+    display: flex;
+
     background-color: #F1F1F1;
 
     margin-top: 96px;
-    height: 472px;
+    /*height: 472px;*/
+    /*height: 480px;*/
+    height: 640px;
 }
 
 #leftGCContainer {
@@ -158,9 +162,9 @@
     align-items: center;
     justify-content: center;
 
-    /*width: 480px;*/
-    width: 472px;
-    height: 480px;
+    width: 480px;
+    /*width: 472px;*/
+    height: 640px;
     margin: 0 80px 80px;
 }
 
@@ -228,6 +232,42 @@
 }
 
 #rightGCContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 472px;
+    height: 640px;
+    margin: 0 80px 80px;
+}
+
+#businessCard {
+    display: flex;
+
+    background-color: #e61f51;
+
+    width: 385px;
+    height: 220px;
+
+    border-radius: 10px;
+
+    transform: rotate(25deg);
+    /*transform: rotate3d(1, 1, 1, 45deg);*/
+}
+
+#businessCardText {
+
+}
+
+#hiddenContent {
+    color: #e61f51;
+}
+
+#hiddenContent:hover {
+    color:black;
+}
+
+#businessCardPic {
 
 }
 

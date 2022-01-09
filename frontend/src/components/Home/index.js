@@ -23,12 +23,26 @@ const Home = () => {
                         <div className={css.contentCard} id={css.giftCardContainer}>
                             <div id={css.leftGCContainer}>
                                 <div id={css.littleHeaderGC}>Introducing</div>
-                                <div id={css.bigHeaderGC}>Airbnb gift cards</div>
+                                {/*<div id={css.bigHeaderGC}>Airbnb gift cards</div>*/}
+                                <div id={css.bigHeaderGC}>Taylor Barnabic</div>
                                 <div id={css.GCButton}>
-                                    <span id={css.GBButtonText}>Shop now</span>
+                                    {/*<span id={css.GBButtonText}>Shop now</span>*/}
+                                    <a href={"/about"}><span id={css.GBButtonText}>Learn more</span></a>
                                 </div>
                             </div>
-                            <div id={css.rightGCContainer}></div>
+                            <div id={css.rightGCContainer}>
+                                <div id={css.businessCard}>
+                                    <div id={css.businessCardText}>
+                                        <div>Taylor Barnabic</div>
+                                        <div>Full Stack Web Developer</div>
+                                        <div>Linkedin (Replace w Logo)</div>
+                                        <div>Github (Replace w Logo) taylor-b-02</div>
+                                        <div>Phone #: <span id={css.hiddenContent}>(201)-983-9337</span></div>
+                                        <div>Email: <span id={css.hiddenContent}>tbarnabic@gmail.com</span></div>
+                                    </div>
+                                    <div id={css.businessCardPic}></div>
+                                </div>
+                            </div>
                         </div>
                         <div className={css.contentCard} id={css.locationCardContainer}>
                             <span id={css.locationHeader}>Inspiration for your next trip</span>
