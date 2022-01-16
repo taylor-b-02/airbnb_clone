@@ -1,5 +1,6 @@
 #container {
-    margin-top: 176px;
+    /*margin-top: 176px;*/
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -19,8 +20,11 @@
     /*background-color: #FFFFFF;*/
     background-color: #000000;
 
-    min-height: 714px;
-    max-height: 954px;
+    /*min-height: 714px;*/
+    /*min-height: 754px;*/
+    /*max-height: 954px;*/
+    /*height: 1054px;*/
+    height: 1150px;
     min-width: 100%;
 
     z-index: 2;
@@ -64,6 +68,10 @@
     box-sizing: border-box;
 }
 
+#imageContainer {
+    margin-top: 96px;
+}
+
 #mainImage {
     /*position: absolute;*/
     /*left: 0;*/
@@ -75,6 +83,8 @@
     max-height: 100%;
 
     border-radius: 12px;
+
+    /*margin-top: 96px;*/
 }
 
 
@@ -246,17 +256,43 @@
 
     background-color: #e61f51;
 
-    width: 385px;
-    height: 220px;
+    /*width: 385px; 35*/
+    width: 420px;
+    /*height: 220px; 20 */
+    height: 240px;
 
     border-radius: 10px;
 
     transform: rotate(25deg);
     /*transform: rotate3d(1, 1, 1, 45deg);*/
+
+    /*line-height: 20px;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #businessCardText {
+    margin: 15px;
+}
 
+#bcName {
+    font-size: 30px;
+}
+
+#bcTitle {
+    font-size: 14px;
+    margin-left: 15px;
+    margin-bottom: 65px;
+}
+
+#bcEmail {
+
+}
+
+#bcLink {
+    text-decoration: none;
+    outline: none;
+    color: black;
 }
 
 #hiddenContent {
@@ -267,7 +303,7 @@
     color:black;
 }
 
-#businessCardPic {
+#businessCardRight {
 
 }
 

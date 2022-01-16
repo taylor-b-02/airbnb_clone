@@ -23,6 +23,36 @@
     width: 626px;
 }
 
+#buttonContainer {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#becomeHostButton {
+    box-sizing: border-box;
+    display: flex;
+    color: #222222;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    padding: 12px;
+    border-radius: 22px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#becomeHostButton:hover {
+    background-color: #F7F7F7;
+}
+
+#hostLink {
+    color: #222222;
+    text-decoration: none;
+}
+
 #globeDiv {
     display: flex;
     justify-content: center;
@@ -30,6 +60,8 @@
     border-radius: 100%;
     width: 46px;
     height: 42px;
+
+    margin-right: 8px;
 }
 
 #globeDiv:hover {
