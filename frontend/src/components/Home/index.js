@@ -1,70 +1,98 @@
 import React from 'react';
+import {AiFillLinkedin, AiFillGithub, AiOutlinePhone, AiFillPhone, AiFillMail, AiOutlineMail} from 'react-icons/ai';
+import {
+    SiReact,
+    SiJavascript,
+    SiJava,
+    SiPython,
+    SiExpress,
+    SiFlask,
+    SiHtml5,
+    SiCss3,
+    SiPostgresql,
+    SiDocker,
+    SiSocketdotio,
+    SiAmazonaws,
+    SiNodedotjs
+} from 'react-icons/si';
 // import * as sessionActions from '../../store/session';
 // import { useDispatch, useSelector } from 'react-redux';
-import ExploreButton from './ExploreButton';
-import './Home.css';
+// import ExploreButton from './ExploreButton';
+import LocationCard from "./LocationCard";
+import css from './Home.module.css';
 
 const Home = () => {
-	return (
-		<div id="home-container">
-			<img
-				src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
-				id="main-pic"
-				alt="Splash Page"
-			/>
-			<div id="explore-nearby-span">Explore Nearby</div>
-			<div id="explore-container">
-				<ExploreButton
-					name="New York"
-					travelTime="45 minute"
-					imageURL="https://a0.muscache.com/im/pictures/be4d3ba5-08d7-4afe-95a7-f2da6453886a.jpg?im_q=medq&im_w=240"
-					className="explore-button"
-				/>
-				<ExploreButton
-					name="Washington"
-					travelTime="5 hour"
-					imageURL="https://a0.muscache.com/im/pictures/7253e011-7c22-48fd-b75d-d0da35372397.jpg?im_q=medq&im_w=240"
-					className="explore-button"
-				/>
-				<ExploreButton
-					name="Philadelphia"
-					travelTime="2.5 hour"
-					imageURL="https://a0.muscache.com/im/pictures/76e5f1c6-a788-418c-a28b-f0ee29cffd41.jpg?im_q=medq&im_w=240"
-					className="explore-button"
-				/>
-				<ExploreButton
-					name="Boston"
-					travelTime="5 hour"
-					imageURL="https://a0.muscache.com/im/pictures/847cfb7f-788d-42dc-9148-f375348dde76.jpg?im_q=medq&im_w=240"
-					className="explore-button"
-				/>
-				<ExploreButton
-					name="Arlington"
-					travelTime="5 hour"
-					imageURL="https://a0.muscache.com/im/pictures/560c06e1-a396-4414-9e38-4fbe8e9f04c4.jpg?im_q=medq&im_w=240"
-					className="explore-button"
-				/>
-				<ExploreButton
-					name="Portland"
-					travelTime="7 hour"
-					imageURL="https://a0.muscache.com/im/pictures/71ae2609-6082-4f31-aa20-8629d7fab7d7.jpg?im_q=medq&im_w=240"
-					className="explore-button"
-				/>
-				<ExploreButton
-					name="North Bergen"
-					travelTime="30 minute"
-					imageURL="https://a0.muscache.com/im/pictures/a161fb95-6875-4aaa-aecd-3a46dead3220.jpg?im_q=medq&im_w=240"
-					className="explore-button"
-				/>
-				<ExploreButton
-					name="Baltimore"
-					travelTime="4.5 hour"
-					imageURL="https://a0.muscache.com/im/pictures/f3ebcc73-30b2-469f-b6ba-0578fdaaa649.jpg?im_q=medq&im_w=240"
-					className="explore-button"
-				/>
-			</div>
-		</div>
-	);
+    return (
+        <div id={css.container}>
+            <div id={css.lowerBackground}>
+                <div id={css.upperBackground}>
+                    <div id={css.contentContainer}>
+                        <div className={css.contentCard} id={css.imageContainer}>
+                            <img id={css.mainImage}
+                                 alt={"Stylish camping in the woods"}
+                                 src="https://a0.muscache.com/im/pictures/53e51dcb-8fad-4ce8-b61c-8a7a369267bf.jpg?im_q=highq&im_w=1920"/>
+                            <div id={css.imageHeader}>
+                                <div id={css.imageText}>Not sure where to go? Perfect.</div>
+                                <button id={css.imageButton}><span id={css.imageButtonText}>I'm flexible</span></button>
+                            </div>
+                        </div>
+                        <div className={css.contentCard} id={css.giftCardContainer}>
+                            <div id={css.leftGCContainer}>
+                                <div id={css.littleHeaderGC}>Introducing</div>
+                                <div id={css.bigHeaderGC}>Airbnb gift cards</div>
+                                {/*<div id={css.bigHeaderGC}>Taylor Barnabic</div>*/}
+                                <div id={css.GCButton}>
+                                    {/*<span id={css.GBButtonText}>Shop now</span>*/}
+                                    <a href={"/about"}><span id={css.GBButtonText}>Learn more</span></a>
+                                </div>
+                            </div>
+                            <div id={css.rightGCContainer}>
+                                <div id={css.businessCard}>
+                                    <div id={css.businessCardText}>
+                                        <div id={css.bcName}>Taylor Barnabic</div>
+                                        <div id={css.bcTitle}>Full Stack Web Developer</div>
+                                        <div><a href={"https://www.linkedin.com/in/taylor-barnabic-63892a20a"}
+                                                target={"_blank"} id={css.bcLink}><AiFillLinkedin/> Linkedin</a></div>
+                                        <div><a href={"https://github.com/taylor-b-02"}
+                                                target={"_blank"} id={css.bcLink}><AiFillGithub/> taylor-b-02</a></div>
+                                        <div><AiFillPhone/> <span id={css.hiddenContent}>(201)-983-9337</span></div>
+                                        <div><a href={"mailto:tbarnabic@gmail.com"} id={css.bcLink}>
+                                            <AiFillMail/> tbarnabic@gmail.com
+                                        </a>
+                                        </div>
+                                    </div>
+                                    <div id={css.businessCardRight}>
+                                        <SiHtml5 title={"HTML5"}/>
+                                        <SiCss3 title={"CSS3"}/>
+                                        <SiJavascript title={"JavaScript"}/>
+                                        <SiReact title={"React"}/>
+                                        <SiExpress title={"Express"}/>
+                                        <SiNodedotjs title={"node.js"}/>
+                                        <SiPython title={"python"}/>
+                                        <SiFlask title={"Flask"}/>
+                                        <SiPostgresql title={"PostgreSQL"}/>
+                                        <SiSocketdotio title={"Socket.IO"}/>
+                                        <SiDocker title={"docker"}/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={css.contentCard} id={css.locationCardContainer}>
+                            <span id={css.locationHeader}>Inspiration for your next trip</span>
+                            <div id={css.locationCardWrapper}>
+                                <LocationCard bgColor={"#BC196D"} name={"Scranton"} distance={68}/>
+                                <LocationCard bgColor={"#DD3150"} name={"New York"} distance={68}/>
+                                <LocationCard bgColor={"#CC2D4A"} name={"Third Thing"} distance={68}/>
+                                <LocationCard bgColor={"#D93A30"} name={"Los Angeles"} distance={68}/>
+                            </div>
+                        </div>
+                        {/*<footer id={css.footerContainer}>Foot</footer>*/}
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+        ;
 };
 
 export default Home;

@@ -4,7 +4,8 @@ import { Route, Switch } from 'react-router-dom';
 import LoginFormPage from './components/LoginFormPage';
 import SignupFormPage from './components/SignupFormPage';
 import * as sessionActions from './store/session';
-import Navigation from './components/Navigation';
+// import Navigation from './components/Navigation';
+import NavBar from "./components/NavBar";
 import Home from './components/Home';
 import SpotsPage from './components/SpotsPage';
 import Spot from './components/Spot';
@@ -22,7 +23,7 @@ function App() {
 
 	return (
 		<>
-			<Navigation isLoaded={isLoaded} />
+			<NavBar isLoaded={isLoaded} />
 			{isLoaded && (
 				<Switch>
 					<Route path="/login">
