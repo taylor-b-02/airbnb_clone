@@ -62,7 +62,7 @@ function LoginFormPage() {
                                value={password}/>
                     </div>
                     <div>
-                        <button className={css.styledButton}>Log in</button>
+                        <button className={css.styledButton} type={"submit"}>Log in</button>
                         <button className={css.styledButton} id={css.demoButton} onClick={handleDemo}>Demo User</button>
                     </div>
                 </div>

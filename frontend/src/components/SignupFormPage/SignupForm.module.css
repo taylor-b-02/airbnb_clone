@@ -1,9 +1,10 @@
-#loginContainer {
+#signupContainer {
     margin-top: 148px;
     /*z-index: 3;*/
     width: 566px;
     min-height: 418px;
-    max-height: 468px;
+    /*max-height: 468px;*/
+    height: 758px;
 
     border-color: #B0B0B0;
     border-width: 1px;
@@ -13,7 +14,7 @@
     top: 24px;
 }
 
-#loginTitle {
+#signupTitle {
     display:flex;
     align-items: center;
     justify-content: center;
@@ -60,12 +61,39 @@
     outline: none;
 }
 
-#emailContainer {
+#fNameContainer {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
 
-#passwordContainer {
+#lNameContainer {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: none;
+}
+
+#fieldCaption {
+    color: #717171;
+
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 200;
+
+    margin-bottom: 24px;
+}
+
+#bdayContainer {
+}
+
+#emailContainer {
+}
+
+#passwordField {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#cPasswordField {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-top: none;
